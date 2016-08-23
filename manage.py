@@ -3,7 +3,9 @@ from flask.ext.migrate import Migrate, MigrateCommand
 
 from main import app, db, User, Post, Comment, Tag
 
-manager = Manager(app,db)
+migrate = Migrate(app,db)
+
+manager = Manager(app)
 
 manager.add_command('server', Server())
 manager.add_command('db',MigrateCommand)
