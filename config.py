@@ -5,4 +5,6 @@ class ProdConfig(object):
     pass
 
 class DevConfig(object):
-    pass
+    debug = True
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///database.db'
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
